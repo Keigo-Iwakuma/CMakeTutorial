@@ -5,7 +5,9 @@
 // include the generated table
 #include "Table.hpp"
 
+namespace mathfunctions {
 // a hack square root calculation using simple operations
+namespace detail {
 double mysqrt(double x)
 {
     if (x <= 0) {
@@ -28,5 +30,9 @@ double mysqrt(double x)
         result = result + 0.5 * delta / result;
         std::cout << "Computing sqrt of " << x << " to be " << result << std::endl;
     }
+
     return result;
+}
+
+}
 }
